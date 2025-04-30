@@ -1,0 +1,14 @@
+# Configuring application settings, eg server port, database connection, etc.
+
+server:
+  port: 8080
+
+#spring:
+#  datasource:
+#      url: jdbc:mysql://localhost:3306/mydb
+#      username: root
+#      password: password
+#  jpa:
+#      hibernate:
+#      ddl-auto: update
+#      show-sql: true
