@@ -1,3 +1,8 @@
 runtime: java17
 instance_class: F1
+
 entrypoint: java -jar TravelSmart-1.0-SNAPSHOT.jar
+
+automatic_scaling:
+  min_instances: 0   # Don't keep idle instances running
+  max_instances: 1
