@@ -24,4 +24,4 @@ spring:
 
 runtime: java17
 instance_class: F1
-entrypoint: java -jar my-app.jar
+entrypoint: java -jar TravelSmart-1.0-SNAPSHOT.jar
