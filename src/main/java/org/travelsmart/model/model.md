@@ -8,3 +8,11 @@ JSON payload from the frontend
 
 ## Why UserRegistration is in 'model'
 - it's in 'model' because it's a **data structure** not a logic handler or web controller
+- it's a DTO - collects data coming from frontend
+
+## Why User is in 'model'
+- User is an 'Entity' - connects to DB - entity stored and queried in the DB
+
+## Object-Relational Mapping 
+- Programming technique that simplifies database interactions by allowing developers to work with objects 
+in their programming language instead of writing SQL queries directly

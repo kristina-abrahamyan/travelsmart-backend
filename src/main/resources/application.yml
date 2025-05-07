@@ -3,12 +3,25 @@
 server:
   port: 8080
 
-#spring:
-#  datasource:
-#      url: jdbc:mysql://localhost:3306/mydb
-#      username: root
-#      password: password
-#  jpa:
-#      hibernate:
-#      ddl-auto: update
-#      show-sql: true
+spring:
+  datasource:
+    continue-on-error: true
+    url: jdbc:mysql://localhost:3306/travelsmart_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # Java Persistence API - a specification (standard) for mapping Java objects to database tables
+# Hibernate is the implementation of JPA that Spring Boot uses by default.
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#  liquibase:
+#    enabled: true
+
+runtime: java17
+instance_class: F1
+entrypoint: java -jar my-app.jar
