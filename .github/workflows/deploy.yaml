@@ -21,6 +21,9 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean package -DskipTests
+        
+      - name: Move JAR to root for App Engine
+        run: mv target/TravelSmart-1.0-SNAPSHOT.jar .
 
       - name: Authenticate with Google Cloud
         uses: google-github-actions/auth@v2
@@ -31,3 +34,4 @@ jobs:
         uses: google-github-actions/deploy-appengine@v1
         with:
           project_id: travelsmart-gcp
+          deliverables: app.yaml
